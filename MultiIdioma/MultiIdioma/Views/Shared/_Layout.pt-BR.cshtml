@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    [<a href="@Url.RouteUrl(new { lang = "pt-BR", controller = "Home", action = "Index",})">Português</a>]
+    [<a href="@Url.RouteUrl(new { lang = "en-US", controller = "Home", action = "Index",})">Inglês</a>]
+
+    <h1>Português</h1>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
